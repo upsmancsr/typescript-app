@@ -10,15 +10,16 @@ import {
   ApolloProvider
 } from "@apollo/client";
 
-const client = new ApolloClient({
-  uri: 'https://48p1r2roz4.sse.codesandbox.io',
-  cache: new InMemoryCache()
-});
+// const client = new ApolloClient({
+//   uri: 'https://48p1r2roz4.sse.codesandbox.io',
+//   cache: new InMemoryCache()
+// });
 
 render(
-  <ApolloProvider client={client}>
-      <App />
-  </ApolloProvider>,
+  // <ApolloProvider client={client}>
+  //     <App />
+  // </ApolloProvider>,
+  <App />,
   document.getElementById('root'),
 );
 

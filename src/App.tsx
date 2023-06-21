@@ -12,26 +12,25 @@ const EXCHANGE_RATES = gql`
   }
 `;
 
-function ExchangeRates() {
-  const {loading, error, data} = useQuery(EXCHANGE_RATES);
+// function ExchangeRates() {
+//   const {loading, error, data} = useQuery(EXCHANGE_RATES);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+//   if (loading) return <p>Loading...</p>;
+//   if (error) return <p>Error :(</p>;
 
-  return data.rates.map(({currency, rate}: { currency: string, rate: number }) => (
-      <div key={currency}>
-          <p>
-              {currency}: {rate}
-          </p>
-      </div>
-  ));
-}
+//   return data.rates.map(({currency, rate}: { currency: string, rate: number }) => (
+//       <div key={currency}>
+//           <p>
+//               {currency}: {rate}
+//           </p>
+//       </div>
+//   ));
+// }
 
 function App() {
   return (
       <div>
-          <h2>Currency Exchange Rates</h2>
-          <ExchangeRates/>
+          <h2>Some data from graphql</h2>
       </div>
   );
 }
